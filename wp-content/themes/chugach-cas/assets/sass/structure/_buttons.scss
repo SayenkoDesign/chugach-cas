@@ -1,0 +1,141 @@
+@mixin button() {
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;    
+    text-align: center;
+    transition: none;
+    text-transform: uppercase;
+    text-decoration: none!important;
+	font-family: $header-font-family;
+	font-size: 13px;
+	letter-spacing: 1.1px;
+	line-height: 20px;
+	text-align: center;
+    min-width: 150px;
+    max-width: 280px;
+    
+    &:hover {
+        background-color: transparent;   
+    }
+    
+    
+    @include breakpoint(medium) {
+        display: inline-block;
+        margin: 0;
+        max-width: none;
+    }
+            
+    &.disabled {
+        pointer-events: none;
+        cursor: default;
+    }
+    
+    svg {
+       position: absolute;
+       left: 10px;
+       top: 50%;
+       transform: translateY(-50%);
+    } 
+    
+}
+
+@mixin button-background( $background: transparent, $background-hover: transparent ) {
+    background-color: $background;
+    
+    &:hover{
+        background-color: $background-hover;
+        border-color: $background-hover;
+    }  
+}
+
+@mixin button-border( $border-color: transparent, $border-color-hover: transparent, $size: 2px ) {
+    border-color: $border-color;
+    border-width: $size;
+    border-style: solid;
+    &:hover{
+        border-color: $border-color-hover;
+    }  
+}
+
+@mixin button-color( $color: $white, $color-hover: $white, $color-visited: $white, $color-focus: $white, $color-active: $white ) {
+    
+    color: $color;
+    
+    &:visited {
+        color: $color-visited;
+    }
+    
+    &:focus {
+        color: $color-focus;
+    }
+    
+    &:active {
+        color: $color-active;
+    }
+
+    
+    &:hover{
+        color: $color-hover;
+    }  
+}
+
+@mixin button-padding( $top: 10px, $right: 19px, $bottom: 10px, $left: 19px ) {
+    padding: $top $right $bottom $left;
+}
+
+@mixin button-red {
+    @include button-background( $secondary, $white );
+    @include button-color($white, $secondary, $white, $white, $white );
+    @include button-padding();
+    @include button-border($secondary, $secondary, 2px);
+    border-radius: 23px;
+}
+
+@mixin button-blue {
+    @include button-background( transparent, $primary );
+    @include button-color($primary, $white, $primary, $primary, $primary );
+    @include button-padding();
+    @include button-border($primary, $primary, 2px);
+    border-radius: 23px;
+}
+
+@mixin button-white {
+    @include button-background( transparent, white );
+    @include button-color(white, $primary, white, $primary, $primary);
+    @include button-border(white, $white, 2px);
+    @include button-padding();
+    border-radius: 23px;
+}
+
+
+a.button,
+input[type="submit"].button,
+button.button {
+    @include button;  
+        
+    &.blue {
+        @include button-blue; 
+    } 
+    
+    &.white {
+        @include button-white; 
+    } 
+}
+
+
+.button-group {
+    
+    margin: 0 -10px;
+ 
+    a {
+        margin: 0 auto 20px;   
+    }
+    
+    @include breakpoint(medium) {
+        a {
+            margin: 0 10px $global-margin;   
+        }
+    }
+    
+}
+

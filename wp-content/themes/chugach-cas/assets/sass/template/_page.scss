@@ -1,0 +1,32 @@
+html, body {
+	height: 100%;
+    
+    .site-content {
+        background: #fff;   
+    }
+      
+}
+
+body {
+   &:focus {
+      outline: none!important;
+   }
+}
+
+#wpadminbar {
+    z-index: 999999;   
+}
+
+
+button:focus {
+    outline: none;   
+}
+
+
+.site-content {
+    background-color: #ffffff;
+}
+
+#primary section:last-child {
+    //margin-bottom: 45px;   
+}

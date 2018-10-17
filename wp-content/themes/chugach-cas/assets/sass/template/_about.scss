@@ -1,0 +1,181 @@
+// About Page
+
+.template-about {
+    
+    .section-background-image {
+        .wrap {
+            background-size: cover;
+            padding-top: 25%;
+            min-height: rem-calc(200);   
+        }
+    }
+    
+    .section-mission {
+        
+        padding: rem-calc(45 0 0);
+        
+        .mission-statement {
+            background-color: #ececec;
+            border-left: 10px solid $secondary;
+            padding: rem-calc(30 25);  
+            box-shadow: $box-shadow; 
+        }
+        
+        @include breakpoint(large) {
+            
+            .column:first-child {
+                padding-right: rem-calc(map-get($grid-column-gutter, large)*1.5);  
+            }
+            
+            .column:last-child {
+                padding-left: rem-calc(map-get($grid-column-gutter, large)*1.5);  
+            }
+            
+            
+        }   
+    }
+    
+    .section-partnership {
+        padding: rem-calc(0 0 45);
+    }
+    
+    .section-culture {
+        
+        .wrap {
+            background-color: #eff3f2;   
+            padding: rem-calc(45 0 0);
+            
+            @include breakpoint(large) {
+                padding: 0;
+                
+                .column-block {
+                    margin: 0;   
+                }
+            }
+        }
+        
+        @include breakpoint(large) {
+            
+            padding: rem-calc(10 0 45);
+            
+            .column:first-child {
+                padding-right: rem-calc(map-get($grid-column-gutter, large)*1.5);  
+            }
+            
+            .column:last-child {
+                padding-left: rem-calc(map-get($grid-column-gutter, large)*1.5);  
+            }
+            
+            
+        }   
+        
+        .photo-grid {
+        
+            margin: rem-calc(0 -10);
+            
+            @include breakpoint(large) {
+                position: relative;
+                margin: rem-calc(-5 -10 -30);
+            }
+            
+            > div {
+                padding: 0 10px 20px;  
+                float: left;
+                position: relative;   
+                
+                .background {
+                    position: relative;   
+                }
+                
+                &.width-50 {
+                    width: 50%; 
+                    
+                    .background {
+                        height: 180px;   
+                    }
+                }
+                
+                &.width-100 {
+                    width: 100%;
+                }
+                
+            }
+            
+            .background {
+                background-size: cover;
+                background-position: center;
+                height: 360px;
+                box-shadow: $box-shadow;
+            }
+        }
+    }
+    
+    .section-leadership {
+        
+        padding: rem-calc(45 0 0);
+        
+        header {
+            text-align: center;   
+        }
+        
+        article {
+            position: relative;
+            padding-top: 22px;
+            text-align: center;
+            margin-bottom: 40px;
+            
+            .thumbnail {
+                width: 138px;
+                height: 138px;
+                box-shadow: $box-shadow;
+                border-radius: 50%;
+                background-size: cover;
+                background-position: center;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .panel {
+                background-color: #fff;
+                border-top: 4px solid $primary;
+                border-radius: 0 0 8px 8px;
+                box-shadow: 0 11px 12px 0 rgba(0,0,0,0.1);
+                padding: 140px 8px 20px;
+                min-height: 200px;
+            }
+            
+            header {
+                margin-bottom: 0;
+                                
+                h3 {
+                    line-height: 1.46;
+                    color: #454C54;
+                    font-weight: 400;
+	                letter-spacing: 0.3px;
+                    text-transform: none;
+                    margin-bottom: rem-calc(15)
+                }
+
+            }
+            
+            p {
+                font-size: 14px;
+                letter-spacing: 0.5px;
+                line-height: 1.571428571;
+            }
+            
+        }
+    }
+    
+    
+    .section-our-story {
+        padding: rem-calc(45 0 25);
+        
+        header {
+            margin-bottom: rem-calc(30);   
+        }
+    }
+
+}

@@ -1,0 +1,71 @@
+//
+// Footer
+// --------------------------------------------------
+
+
+.site-footer {
+    position: relative;
+    background-color: #ececec;
+    
+    background-size: cover;
+    background-position: center;
+    
+    position: relative;
+    
+    .wrap {
+        position: relative;
+        z-index: 2;   
+    }
+
+}
+
+
+
+
+.footer-copyright {
+    
+    padding: rem-calc(25 0);  
+    
+    @include breakpoint(large down) {
+        text-align: center;
+        
+        .copyright {
+            margin-bottom: 15px;   
+        }
+    }
+    
+    p {
+        color: #4A4A4A;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
+        margin-bottom: 8px; 
+        
+        span {
+             display: block;
+             margin-bottom: 10px;
+             
+             @include breakpoint(medium) {
+                 display: inline;
+                 margin: 0;
+             }
+        }
+        
+        b {
+            font-weight: normal;
+            
+            @include breakpoint(small only) {
+                display: none;
+            }
+        }
+        
+        a {
+            color: #4A4A4A;
+        }
+
+    }
+   
+      
+}
+
+

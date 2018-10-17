@@ -1,0 +1,157 @@
+/*
+Header
+---------------------------------------------- */
+
+// Fix for sticky header
+.logged-in .site-header.fixed {
+    top: 46px;
+
+    @media screen and (min-width: 783px) {
+        top: 32px;
+    }      
+ }
+ 
+
+.site-header {
+
+    background-color: white; 
+    
+    @include breakpoint(large) {
+                
+        &.fixed {
+            transition: transform .2s ease 0s;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 99;
+            transform: translateY(0); 
+            .wrap {
+                position: relative;                
+                @include breakpoint(large) {                
+                    .row:last-child {
+                        padding-top: 0;   
+                    }
+                } 
+                
+            }
+            
+            .nav-primary .menu .menu-item,
+            .nav-primary .menu .menu-item a {
+                transition: all .1s ease 0s; 
+            }
+            
+            .site-title img {
+                max-height: none; 
+                transition: all .2s ease .2s;
+            }
+            
+            /*
+            &.nav-down.shrink {
+                
+                .site-title {
+                    img {
+                       max-height: 60px;
+                       width: auto;   
+                    }
+                }
+                
+                .nav-primary .menu .menu-item {
+                    
+                    padding-left: 0;
+                    padding-right: 0;
+                    a {
+                        font-size: rem-calc(13);   
+                    }
+                }
+            }
+            */
+            
+            &.nav-down {
+                  
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 5px;
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    opacity: .4;
+                    background: rgb(0,0,0);
+                    background: -moz-linear-gradient(180deg, rgba(0,0,0,0.6446953781512605) 25%, rgba(255,255,255,0) 80%);
+                    background: -webkit-linear-gradient(180deg, rgba(0,0,0,0.6446953781512605) 25%, rgba(255,255,255,0) 80%);
+                    background: -webkit-gradient(linear, 100% 0, 0 0, color-stop(0.25, rgba(0,0,0,0.6446953781512605)), color-stop(0.8, rgba(255,255,255,0)));
+                    background: -o-linear-gradient(180deg, rgba(0,0,0,0.6446953781512605) 25%, rgba(255,255,255,0) 80%);
+                    background: linear-gradient(180deg, rgba(0,0,0,0.6446953781512605) 25%, rgba(255,255,255,0) 80%);
+                    z-index: -3;
+                }   
+            }
+            
+            &.nav-up {
+                transform: translateY(-100%);   
+            }
+                
+        }
+        
+        
+    
+    }
+}
+
+
+.site-header {
+    
+    width: 100%;
+    z-index: 99;
+    position: relative;
+                
+    .wrap {
+        
+        .site-branding {
+            text-align: center;   
+            
+            @include breakpoint(large) {
+                text-align: left; 
+            }
+        }
+     
+        .site-title {
+            
+            padding: 15px 0;
+            display: inline-block;
+            
+            vertical-align: middle;
+            max-width: 90px;
+            
+            @include breakpoint(large) {
+                max-width: none;
+            }
+                                    
+            a {
+                display: inline-block;   
+            }
+            
+        }
+
+    }
+
+    
+    .menu-toggle {
+        position: absolute;
+        top: 36px;
+        right: rem-calc(map-get($grid-column-gutter, small) /2 );  
+        z-index: 999;
+        
+        @include breakpoint(large) {
+            right: rem-calc(map-get($grid-column-gutter, large) /2 );  
+            top: 24px;
+        }
+    }
+    
+    .shrink {
+        flex: 0 0 auto!important;   
+    }
+                
+}

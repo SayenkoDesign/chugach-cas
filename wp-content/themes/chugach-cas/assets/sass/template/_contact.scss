@@ -1,0 +1,64 @@
+/* CSS Document */
+
+.template-contact {
+    
+    .section-background-image {
+        
+        .row {
+                
+        }
+        
+        .column {
+            background-size: cover;
+            background-position: center;
+            position: relative;   
+            min-height: rem-calc(330);
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%; 
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    
+    .section-default {
+        
+        padding: rem-calc(45 0);
+        
+        .wrap {
+            margin: 0 auto;
+            max-width: rem-calc(900);   
+        }
+        
+        .column:first-child {
+                
+            .entry-content {
+                padding-top: rem-calc(20);   
+                padding-left: rem-calc(40);
+                position: relative;
+                
+                svg {
+                    position: absolute;
+                    top: 23px;
+                    left: 0;   
+                }
+            }
+        }
+        
+        @include breakpoint(large) {            
+            
+            .column:last-child {
+                padding-left: rem-calc(map-get($grid-column-gutter, large)*1.5);  
+            }
+            
+        } 
+        
+        .gfield_description {
+            font-size: rem-calc(20);   
+        }
+    }
+    
+}

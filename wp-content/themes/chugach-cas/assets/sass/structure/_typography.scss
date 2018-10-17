@@ -1,0 +1,172 @@
+// Typography
+
+/* Typography resets */
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; 
+}
+
+body {
+	font-family: $paragraph-font-family;
+	font-style: $paragraph-font-style;
+	font-weight: $paragraph-font-weight;
+	font-size: $paragraph-font-size;  
+	color: $paragraph-font-color;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	text-decoration: none;
+}
+
+strong {
+	font-weight: 700;	
+}
+		
+/* Headings
+--------------------------------------------- */	
+		
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $header-font-family;	
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    text-transform: uppercase;   
+}
+
+h4,
+h5,
+h6 {
+    color: $dark-gray;   
+}
+
+@mixin heading-lines( $border-color:$primary ) {
+    
+    display: inline-block;
+    position: relative;
+    padding: 0 60px;
+    
+    &::before,
+    &::after {
+        content: '';
+        width: 56px;
+        height: 3px;
+        background-color: $border-color;
+        position: absolute;
+        top: 50%;
+        margin-top: -6px;
+           
+    }
+    
+    &::before {
+        left: -5px;
+    }
+    
+    &::after {
+        right: -5px;
+    }
+    
+    span {
+                
+        &:before,
+        &:after {
+            content: '';
+            width: 40px;
+            height: 3px;
+            background-color: $border-color;
+            position: absolute;
+            top: 50%;
+            margin-top: 4px;
+        }
+        
+        &::before {
+            left: 10px;
+        }
+        
+        &::after {
+            right: 10px;
+        }   
+    }
+}
+
+
+
+
+p, li {
+    line-height: $paragraph-line-height;
+    
+}
+
+p, ul {
+    margin-bottom: $paragraph-margin-bottom;	
+}
+
+p:last-child {
+    //margin-bottom: 0;   
+}
+
+ul:not([class]),
+ol:not([class]) {
+    margin: rem-calc(0 0 $global-margin 18);
+    
+}
+
+ol:not([class]) {
+    list-style: decimal;
+}
+
+.page-builder section {
+    
+    h2 {
+        margin-bottom: 24px;   
+    }
+    
+    .element-photo {
+     
+        img {
+            box-shadow: 0 11px 12px 0 rgba(0,0,0,0.1); 
+        }
+        
+    }
+    
+    ul:not([class]) {
+        
+        @include list-reset;
+        margin-bottom: rem-calc($global-margin);
+            
+        li {
+            position: relative;
+            
+            min-height: 24px;
+            padding: 0 0 5px 40px;
+            line-height: inherit;
+            margin-bottom: 5px;
+            
+            &:before {
+                content: '';
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                top: 0px;
+                left: 0;
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='translate(1 1)' fill='none' fill-rule='evenodd'%3E%3Cpath d='M16.985 11.214l-3.33 3.33-.117.116-.388-.389.116-.117 3.33-3.33-3.32-3.32-.12-.12.382-.382.12.12 3.59 3.59.12.119-.383.383z' fill='%233E52AA'/%3E%3Cpath d='M5.754 10.83h10.83' stroke='%233E52AA' stroke-width='1.6' stroke-linecap='square'/%3E%3Ccircle stroke='%233E52AA' stroke-width='2' cx='11' cy='11' r='11'/%3E%3C/g%3E%3C/svg%3E%0A");
+                
+                /*
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='translate(1 1)' fill='none' fill-rule='evenodd'%3E%3Cpath d='M16.985 11.214l-3.33 3.33-.117.116-.388-.389.116-.117 3.33-3.33-3.32-3.32-.12-.12.382-.382.12.12 3.59 3.59.12.119-.383.383z' fill='%23FFF'/%3E%3Cpath d='M5.754 10.83h10.83' stroke='%23FFF' stroke-width='1.6' stroke-linecap='square'/%3E%3Ccircle stroke='%23FFF' stroke-width='2' cx='11' cy='11' r='11'/%3E%3C/g%3E%3C/svg%3E%0A");
+                */
+            }
+            
+            
+    
+            
+        }   
+    }
+}

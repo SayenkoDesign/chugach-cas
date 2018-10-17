@@ -1,0 +1,215 @@
+/* CSS Document */
+
+
+.template-services {
+    
+    .section-background-image {
+        .wrap {
+            background-size: cover;
+            padding-top: 25%;
+            min-height: rem-calc(200);   
+        }
+    }
+    
+    
+    .section-block {
+        
+        padding: rem-calc(45 0 0);
+     
+        @include breakpoint(large) {
+            
+            padding: 0;
+            
+            .column-block {
+                margin-bottom: 0;
+            }
+            
+            &.photo-left {   
+            
+                .photo {
+                    left: 0;   
+                }
+                         
+                img {
+                    visibility: hidden; 
+                }
+                
+                .column:last-child .entry-content {
+                    padding-top: rem-calc(60); 
+                    padding-bottom: rem-calc(60); 
+                    padding-left: rem-calc(60);     
+                }
+            }
+            
+            &.photo-right {      
+            
+                .photo {
+                    right: 0;   
+                }
+                          
+                img {
+                    visibility: hidden; 
+                }
+                
+                .column:last-child .entry-content {
+                    padding-top: rem-calc(60); 
+                    padding-bottom: rem-calc(60); 
+                    padding-right: rem-calc(60);     
+                }
+            }
+            
+            .wrap {
+                position: relative;
+                
+                @include breakpoint(large) {
+                    border-bottom: 1px solid #d6d6d6;
+                }
+            }
+            
+            &:last-child .wrap {
+                border-bottom: 0;   
+            }
+            
+            .column:first-child {
+              // padding-left: 0;
+            }
+            
+            .element-photo {
+               position: relative;
+               top: 0;
+               float: left;
+            }
+
+        }
+        
+        
+        .photo {
+            background-size: cover;
+            background-repeat: no-repeat; 
+            background-position: center;
+            padding-top: 50%;  
+            width:100%;
+            display: none;
+            box-shadow: $box-shadow;
+             
+            @include breakpoint(large) {
+                width: 50%;
+                height: 100%;
+                position: absolute;
+                bottom: 0;
+                padding-top: 0;
+                display: block;
+                
+                &:after {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    padding-top: 0;
+                    display: block; 
+                    z-index: 2;
+                    background-color: rgba($primary,.7);
+                }
+                
+           }
+        }
+        
+    }
+    
+    .section-specs {
+                
+        .wrap {
+            background-repeat: no-repeat;
+            background-position: right bottom;    
+            padding: rem-calc(0 0 45 0);  
+            background-size: contain;  
+            
+            @include breakpoint(large) {
+                padding: rem-calc(75 0 45);  
+            }
+            
+            
+            @include breakpoint(xxlarge down) {
+                background-image: none!important;
+            }
+        }
+        
+        .column:first-child .entry-content {
+            
+            @include breakpoint(large) {
+                padding-right: rem-calc(map-get($grid-column-gutter, large)*2);  
+            }
+        }
+        
+        .column:last-child {
+            
+            .element-html {
+                
+                display: inline-block;
+                border-top: 1px solid $secondary;
+                border-bottom: 1px solid $secondary;
+                padding: rem-calc(20 0 10);
+             
+                table { 
+                    width: auto;
+                    border-collapse: collapse;
+                    
+                    tr td:first-child {
+                        @include breakpoint(large) {
+                            width: 40%;
+                        }
+                    }
+                 }
+                
+                table th, table td { 
+                  text-align: left; 
+                  padding: rem-calc(10 10 10 0);
+                }
+
+                
+            }
+        }
+    }
+    
+    
+    
+    .section-hero-background {
+        
+        .wrap {
+            background-size: cover;
+            padding: rem-calc(60 0);
+            position: relative;
+            text-align: center;
+            
+            &.background-overlay:after {
+                content: '';
+                background-color: rgba( $white, 0.9);
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            
+            > .row {
+                position: relative;
+                z-index: 2;   
+            }
+            
+            
+            img {
+                box-shadow: none; 
+                width: 180px;
+                margin: rem-calc(0 auto 20);  
+            }
+            
+            p {
+                margin-bottom: rem-calc(12);   
+            }
+        }
+    }
+    
+}

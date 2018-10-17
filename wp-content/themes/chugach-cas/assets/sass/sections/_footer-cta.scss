@@ -1,0 +1,69 @@
+// Footer CTA
+
+.section-footer-cta {
+    background-color: #ececec;
+    position: relative;
+    
+    @include breakpoint(xxlarge) {
+        padding-bottom: rem-calc(25);   
+    }
+        
+    .wrap {
+        background-size: cover;
+        background-position: center;
+        
+        padding: rem-calc(45 0 0);
+        
+        @include breakpoint(large) {
+            padding: 0;
+        }
+        
+        .row {
+            min-height: rem-calc(536);   
+        }
+        
+        
+        .element-html {
+            
+            h2,
+            p {
+                color: #fff;   
+            }
+            
+            margin: 0 auto; 
+            text-align: center;
+            
+            @include breakpoint(medium) {
+                max-width: 45%;
+            }
+            
+            @include breakpoint(xxlarge) {
+                max-width: 35%;
+            }
+            
+            .button {
+                @include button-white;    
+            }
+        }
+    }
+    
+    .footer-icon {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);   
+        height: rem-calc(536 + 40);
+        width: auto;
+        z-index: 2;
+        
+        @include breakpoint(xxlarge) {
+            display: block;
+        }
+        
+        img {
+            max-height: 100%;
+            width: auto;   
+        }
+    }
+}
