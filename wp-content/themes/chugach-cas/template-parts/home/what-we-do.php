@@ -43,7 +43,7 @@ if( ! class_exists( 'Home_What_We_Do_Section' ) ) {
             // Header
             $header = new Element_Header( [ 'fields' => $fields ] );
             $column = new Element_Column(); 
-            $column->add_render_attribute( 'wrapper', 'class', 'shrink' );
+            $column->add_render_attribute( 'wrapper', 'class', 'column-block shrink' );
             $column->add_child( $header );
             
             $row->add_child( $column );
@@ -86,7 +86,7 @@ if( ! class_exists( 'Home_What_We_Do_Section' ) ) {
                 }
             }
             
-            return sprintf( '<div class="grid"><div class="row small-up-1 large-up-3">%s</div></div>', $grid_items );   
+            return sprintf( '<div class="grid"><div class="row small-up-2 medium-up-4 align-middle">%s</div></div>', $grid_items );   
         }
         
     }

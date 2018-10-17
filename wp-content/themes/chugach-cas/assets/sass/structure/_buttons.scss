@@ -11,7 +11,7 @@
 	letter-spacing: 1.1px;
 	line-height: 20px;
 	text-align: center;
-    min-width: 150px;
+    min-width: 190px;
     max-width: 280px;
     
     &:hover {
@@ -93,6 +93,14 @@
 
 @mixin button-blue {
     @include button-background( transparent, $primary );
+    @include button-color($primary, $white, $primary, $primary, $primary );
+    @include button-padding();
+    @include button-border($primary, $primary, 2px);
+    border-radius: 23px;
+}
+
+@mixin button-green-alt {
+    @include button-background( $white, $primary );
     @include button-color($primary, $white, $primary, $primary, $primary );
     @include button-padding();
     @include button-border($primary, $primary, 2px);

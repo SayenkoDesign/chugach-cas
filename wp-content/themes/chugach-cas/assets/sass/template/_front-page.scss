@@ -39,71 +39,35 @@
         text-align: center;
             
         .row {
+            min-height: 300px;
             padding: 45px 0;   
             
             @include breakpoint(large) {
-                min-height: 500px;
+                min-height: 560px;
             }
         }
         
-        h2,
+        @include breakpoint(large) {
+            .hero-caption {
+                position: relative;
+                top: rem-calc(-50);
+                margin: 0 auto;
+                max-width: rem-calc(700);   
+            }
+        }
+        
+
         h1 {
             color: $primary;   
         }
         
-        h2 {
-            display: inline-block;
-            position: relative;
-            padding: 0 90px;
-            
-            &::before,
-            &::after {
-                content: '';
-                width: 60px;
-                height: 3px;
-                background-color: $secondary;
-                position: absolute;
-                top: 50%;
-                margin-top: -6px;
-                   
-            }
-            
-            &::before {
-                left: 30px;
-            }
-            
-            &::after {
-                right: 30px;
-            }
-            
-            span {
-                
-                padding: 0 5px;
-                        
-                &:before,
-                &:after {
-                    content: '';
-                    width: 90px;
-                    height: 3px;
-                    background-color: $secondary;
-                    position: absolute;
-                    top: 50%;
-                    margin-top: 4px;
-                }
-                
-                &::before {
-                    left: 0;
-                }
-                
-                &::after {
-                    right: 0;
-                }   
-            }    
+        h3 {
+            font-family: Georgia, 'Times New Roman', Times, serif;  
+            font-style: italic; 
+            letter-spacing: 0.3px; 
+            text-shadow: 0 0 8px #FFFFFF;  
         }
-        
-        h1 {
-          
-        }
+
     }
             
 }
@@ -112,20 +76,18 @@
 .section-what-we-do {
     
     .wrap {
-        padding: rem-calc(0 0 15);
+        padding: rem-calc(30 0 15);
     }
     
     @include breakpoint(large) {
-        
-        .wrap {
-            max-width: rem-calc(960);
-            margin: 0 auto;   
-        }
-        
         .shrink {
             flex: 0 0 auto!important;
-            max-width: rem-calc(280);
-        }   
+            max-width: rem-calc(400);
+        }  
+        
+        .column-block {
+            margin-bottom: 0;   
+        }
     }
     
     .grid-item {
@@ -135,7 +97,7 @@
         text-align: center;
         
         .thumbnail {
-            margin-bottom: rem-calc(10);   
+            margin-bottom: rem-calc(15);   
         }
         
         p {
@@ -148,7 +110,8 @@
 .home .section-background-hero {
     
     .wrap {
-        padding: rem-calc(20 0);   
+        padding: rem-calc(20 0); 
+        background-size: cover;  
     }
     
     .row {
@@ -169,7 +132,12 @@
     }
     
     header {
-        margin-bottom: rem-calc(40);   
+        margin-bottom: rem-calc(40);  
+        
+        h3 {
+            font-family: Georgia, 'Times New Roman', Times, serif;  
+            font-style: italic;    
+        }
     }
     
     .element-button {
@@ -179,7 +147,7 @@
     .grid-item {
         
         @include breakpoint(large) {
-            padding: rem-calc(0 60);
+            padding: rem-calc(0 30);
         }
         
         text-align: center;
@@ -193,9 +161,10 @@
         }
     }
     
-    .grid .medium-up-2 .column {
+    .grid .large-up-3 .column {
         @include breakpoint(large) {
-            &:nth-child(even) {
+            &:nth-child(3n+2),
+            &:nth-child(3n+3) {
                 border-left: 1px solid #d6d6d6;
             }
         }

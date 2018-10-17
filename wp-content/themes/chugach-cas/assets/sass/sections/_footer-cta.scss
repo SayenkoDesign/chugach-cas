@@ -3,10 +3,7 @@
 .section-footer-cta {
     background-color: #ececec;
     position: relative;
-    
-    @include breakpoint(xxlarge) {
-        padding-bottom: rem-calc(25);   
-    }
+    overflow: hidden;
         
     .wrap {
         background-size: cover;
@@ -30,6 +27,19 @@
                 color: #fff;   
             }
             
+            h2 {
+                margin-bottom: rem-calc(25);   
+            }
+            
+            p {
+                font-size: rem-calc(14); 
+                line-height: 2;
+                
+                &:last-child {
+                    margin-bottom: 0;   
+                }
+            }
+            
             margin: 0 auto; 
             text-align: center;
             
@@ -38,7 +48,7 @@
             }
             
             @include breakpoint(xxlarge) {
-                max-width: 35%;
+                max-width: 40%;
             }
             
             .button {

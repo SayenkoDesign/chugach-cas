@@ -28,18 +28,14 @@ strong {
 		
 h1,
 h2,
-h3,
 h4,
 h5,
 h6 {
 	font-family: $header-font-family;	
 }
 
-h1,
-h2,
 h3 {
-    font-weight: 700;
-    text-transform: uppercase;   
+    color: #454C54;
 }
 
 h4,
@@ -48,57 +44,11 @@ h6 {
     color: $dark-gray;   
 }
 
-@mixin heading-lines( $border-color:$primary ) {
-    
-    display: inline-block;
-    position: relative;
-    padding: 0 60px;
-    
-    &::before,
-    &::after {
-        content: '';
-        width: 56px;
-        height: 3px;
-        background-color: $border-color;
-        position: absolute;
-        top: 50%;
-        margin-top: -6px;
-           
-    }
-    
-    &::before {
-        left: -5px;
-    }
-    
-    &::after {
-        right: -5px;
-    }
-    
-    span {
-                
-        &:before,
-        &:after {
-            content: '';
-            width: 40px;
-            height: 3px;
-            background-color: $border-color;
-            position: absolute;
-            top: 50%;
-            margin-top: 4px;
-        }
-        
-        &::before {
-            left: 10px;
-        }
-        
-        &::after {
-            right: 10px;
-        }   
-    }
+h3,
+h4,
+h5 {
+    margin-bottom: rem-calc(10);   
 }
-
-
-
 
 p, li {
     line-height: $paragraph-line-height;

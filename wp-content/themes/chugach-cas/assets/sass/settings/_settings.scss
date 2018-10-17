@@ -22,22 +22,20 @@ $global-lineheight: 1.75;
 $black: #000;
 $white: #ffffff;
 
-$green: #AAC687;
-
-$primary: #3E52AA;
-$secondary: #DF3838;
+$primary: #006940;
+$secondary: #64A704;
 
 $light-gray: #EFF3F1;
 $gray: #BCBDBF;
 $dark-gray: #252B33;
 
 $open-sans: 'Open Sans', sans-serif; 
-$montserrat: 'Montserrat', sans-serif;
+$lato: 'Lato', sans-serif;
 
 $transition: none;
 
 $body-background: #FFF;
-$body-font-color: #4A4A4A;
+$body-font-color: #454C54;
 $body-font-family: $open-sans;
 
 
@@ -81,7 +79,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ---------
 
-$header-font-family: $montserrat;
+$header-font-family: $lato;
 $header-font-weight: 400;
 $header-font-style: normal;
 
@@ -89,25 +87,17 @@ $header-font-style: normal;
 /// @type Map
 $header-styles: (
   small: (
-    'h1': ('font-size': 40, 'line-height': 1.19 ),
-    'h2': ('font-size': 30, 'line-height': 1.2),
+    'h1': ('font-size': 40, 'line-height': 1.2 ),
+    'h2': ('font-size': 30, 'line-height': 1.367),
     'h3': ('font-size': 22, 'line-height': 1.46 ),
-    'h4': ('font-size': 18, 'line-height': 1.6 ),
-    'h5': ('font-size': 16, 'line-height': 1.6),
-    'h6': ('font-size': 16, 'line-height': 1.6),
-  ),
-  large: (
-    'h1': ('font-size': 47 ),
-    'h2': ('font-size': 30 ),
-    'h3': ('font-size': 22 ),
-    'h4': ('font-size': 18 ),
-    'h5': ('font-size': 16 ),
-    'h6': ('font-size': 16 ),
-  ),
-) !default;
+    'h4': ('font-size': 16, 'line-height': 1.8125 ),
+    'h5': ('font-size': 16, 'line-height': 1.8125),
+    'h6': ('font-size': 16, 'line-height': 1.8125),
+  )
+);
 
-$header-color: $primary;
-$header-lineheight: 1.6;
+$header-color: #005E3C;
+$header-lineheight: 1.2;
 $header-margin-bottom: 30px;
 $small-font-size: 14px;
 $header-small-font-color: $dark-gray;

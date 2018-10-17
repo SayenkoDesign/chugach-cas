@@ -39,10 +39,12 @@ class Element_Header extends Element_Base {
         }
         
         $heading_size = $this->get_settings( 'heading_size' ) ? $this->get_settings( 'heading_size' ) : 'h2';
+        $subheading_size = $this->get_settings( 'subheading_size' ) ? $this->get_settings( 'subheading_size' ) : 'h4';
+        $description_size = $this->get_settings( 'description_size' ) ? $this->get_settings( 'description_size' ) : 'p';
         
         $heading        = _s_format_string( $this->get_fields( 'heading' ), $heading_size );
-        $subheading     = _s_format_string( $this->get_fields( 'subheading' ), 'h4' );
-        $description    = _s_format_string( $this->get_fields( 'description' ), 'p' );
+        $subheading     = _s_format_string( $this->get_fields( 'subheading' ), $subheading_size );
+        $description    = _s_format_string( $this->get_fields( 'description' ), $description_size );
         
         if( empty( $heading ) ) {
             return;

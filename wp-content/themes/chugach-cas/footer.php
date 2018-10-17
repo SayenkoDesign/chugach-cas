@@ -19,7 +19,7 @@
 <footer class="site-footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
     <div class="wrap">
         <?php            
-        $copyright = sprintf( '<p>&copy; %s ALL AMERICAN OIL FIELD, LLC.</p>', 
+        $copyright = sprintf( '<p>&copy; %s Chugach Alaska Services</p>', 
                                   date( 'Y' ) );
                                   
         $designer  = sprintf( '<p>All rights reserved. <a href="%1$s" target="_blank">Seattle Web Design</a> by <a href="%1$s" target="_blank">Sayenko design</a></p>', 'https://www.sayenkodesign.com/' );

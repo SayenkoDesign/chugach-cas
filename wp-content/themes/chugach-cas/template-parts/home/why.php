@@ -41,6 +41,7 @@ if( ! class_exists( 'Home_Why_Section' ) ) {
                                         
             // Header
             $header = new Element_Header( [ 'fields' => $fields ] );
+            $header->set_settings( 'subheading_size', 'h3' );
             $column = new Element_Column(); 
             $column->add_render_attribute( 'wrapper', 'class', 'text-center' );
             $column->add_child( $header );

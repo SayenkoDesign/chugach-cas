@@ -58,7 +58,7 @@ if( ! class_exists( 'Hero_Section' ) ) {
             $fields = $this->get_fields();
             
             // BB Charcoal styles
-            $subheading   = empty( $fields['subheading'] ) ? '' : _s_format_string( sprintf( '<span>%s</span>', $fields['subheading'] ), 'h2' );            
+            $subheading   = empty( $fields['subheading'] ) ? '' : _s_format_string( sprintf( '%s', $fields['subheading'] ), 'h3' );            
             $heading = empty( $fields['heading'] ) ? '' : _s_format_string( $fields['heading'], 'h1' );
             
             $description = empty( $fields['description'] ) ? '' : _s_format_string( $fields['description'], 'p' );
