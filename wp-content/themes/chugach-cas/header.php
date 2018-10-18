@@ -16,7 +16,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
-<link rel="apple-touch-icon" sizes="72x72" href="<?php echo THEME_FAVICONS;?>/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="144x144" href="<?php echo THEME_FAVICONS;?>/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="<?php echo THEME_FAVICONS;?>/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="<?php echo THEME_FAVICONS;?>/favicon-16x16.png">
 <link rel="manifest" href="<?php echo THEME_FAVICONS;?>/site.webmanifest">
