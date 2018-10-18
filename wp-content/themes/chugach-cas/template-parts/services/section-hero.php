@@ -67,7 +67,7 @@ if( ! class_exists( 'Services_Hero_Section' ) ) {
             
             // Photo
             $photo = new Element_Photo( [ 'fields' => $fields ]  );
-            $photo->set_settings( 'size', array( 300, 300, true) );
+            $photo->set_settings( 'size', 'thumbnail' );
             
             // Make sure we have a photo?         
             if( ! empty( $photo->get_element() ) ) {
