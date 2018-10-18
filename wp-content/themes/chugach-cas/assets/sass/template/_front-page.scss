@@ -153,8 +153,9 @@
         text-align: center;
         img {
             box-shadow: $box-shadow;   
-            margin-bottom: rem-calc(15);
+            margin: rem-calc(0 auto 15);
             border-radius: 100%;
+            max-width: rem-calc(216);
         }
         
         h3 {
