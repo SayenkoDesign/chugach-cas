@@ -204,6 +204,8 @@
                 box-shadow: none; 
                 width: 180px;
                 margin: rem-calc(0 auto 20);  
+                border-radius: 100%;
+                box-shadow: $box-shadow;
             }
             
             p {
