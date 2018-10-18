@@ -94,7 +94,7 @@ if( ! class_exists( 'Home_Why_Section' ) ) {
                                 
                 foreach( $rows as $row ) {     
                                     
-                    $thumbnail = sprintf( '<div class="thumbnail">%s</div>', _s_get_acf_image( $row['grid_image'], 'medium' ) );
+                    $thumbnail = sprintf( '<div class="thumbnail">%s</div>', _s_get_acf_image( $row['grid_image'], 'thumbnail' ) );
                     $title = _s_format_string( $row['grid_title'], 'h3' );        
                     $description = _s_format_string( $row['grid_description'], 'p' );                      
                    
