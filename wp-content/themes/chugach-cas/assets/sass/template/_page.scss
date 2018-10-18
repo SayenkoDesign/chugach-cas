@@ -30,3 +30,9 @@ button:focus {
 #primary section:last-child {
     //margin-bottom: 45px;   
 }
+
+.page-error-404 {
+    .section-default {
+        padding-top: rem-calc(45);   
+    }
+}
