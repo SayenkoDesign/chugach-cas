@@ -41,7 +41,8 @@ if( ! class_exists( 'Contact_Background_Image_Section' ) ) {
                      
             // Make sure we have a map?         
             if( ! empty( $fields['map'] ) ) {
-                $html = new Element_Html( [ 'fields' => [ 'html' => $fields['map'] ] ] ); 
+                $map = do_shortcode( $fields['map'] );
+                $html = new Element_Html( [ 'fields' => [ 'html' => $map ] ] ); 
                 $column = new Element_Column(); 
                 $column->add_render_attribute( 'wrapper', 'class', 'small-12 large-4' );
                 $column->add_child( $html );
