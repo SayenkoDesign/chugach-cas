@@ -19,12 +19,10 @@
 <footer class="site-footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
     <div class="wrap">
         <?php            
-        $copyright = sprintf( '<p>&copy; %s Chugach Alaska Services</p>', 
+        $copyright = sprintf( '<p>&copy; %s Chugach Alaska Services. All rights reserved.</p>', 
                                   date( 'Y' ) );
-                                  
-        $designer  = sprintf( '<p>All rights reserved. <a href="%1$s" target="_blank">Seattle Web Design</a> by <a href="%1$s" target="_blank">Sayenko design</a></p>', 'https://www.sayenkodesign.com/' );
                                                     
-        printf( '<div class="column row footer-copyright">%s%s</div>', $copyright, $designer );
+        printf( '<div class="column row footer-copyright">%s</div>', $copyright );
 
         ?>
      </div>
