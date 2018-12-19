@@ -1,4 +1,12 @@
 <?php
+
+// Enable custom fields chnages on local sites only
+if( false == WP_DEBUG ) {
+    add_filter('acf/settings/show_admin', '__return_false');   
+}
+
+
+
 function my_acf_init() {
 	
 	acf_update_setting('google_api_key', GOOGLE_API_KEY );
