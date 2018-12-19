@@ -109,7 +109,7 @@
 
 @mixin button-white {
     @include button-background( transparent, white );
-    @include button-color(white, $primary, white, $primary, $primary);
+    @include button-color(white, $primary, white, $white, $white);
     @include button-border(white, $white, 2px);
     @include button-padding();
     border-radius: 23px;
