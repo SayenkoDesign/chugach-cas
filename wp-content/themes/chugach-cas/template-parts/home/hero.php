@@ -70,7 +70,7 @@ if( ! class_exists( 'Hero_Section' ) ) {
             $html = sprintf( '<div class="hero-caption">%s%s%s</div>', $subheading, $heading, $description );
                                                                         
             $row = new Element_Row(); 
-            $row->add_render_attribute( 'wrapper', 'class', 'align-middle text-center' );
+            $row->add_render_attribute( 'wrapper', 'class', 'text-center' );
             
             $column = new Element_Column(); 
 
