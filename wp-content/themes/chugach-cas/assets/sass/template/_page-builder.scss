@@ -10,6 +10,14 @@
         padding: rem-calc(10 0);  
     }
     
+    .section-background-image {
+        .wrap {
+            background-size: cover;
+            padding-top: 25%;
+            min-height: rem-calc(200);   
+        }
+    }
+    
     .site-main {
         
         section:nth-child(even) {

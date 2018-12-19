@@ -21,6 +21,7 @@ get_header(); ?>
 
 <?php
     _s_get_template_part( 'template-parts/global', 'hero' );
+    _s_get_template_part( 'template-parts/services', 'background-image' );
 ?>
 
 <div id="primary" class="content-area">
